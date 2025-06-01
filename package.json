@@ -1,0 +1,17 @@
+{
+  "name": "extrovert-vs-introvert-dashboard",
+  "version": "1.0.0",
+  "description": "BI風ダッシュボードで外向性と内向性の行動データを視覚化",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "csv-parser": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+} 

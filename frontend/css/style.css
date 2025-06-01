@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.card-header {
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.table th {
+  font-weight: 600;
+  background-color: #f8f9fa;
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%) !important;
+}
+
+.chart-container {
+  position: relative;
+  height: 300px;
+  width: 100%;
+}
+
+/* グラフキャンバスの高さ設定 */
+#distribution-chart {
+  height: 400px !important;
+}
+
+#avg-comparison-chart,
+#social-radar-chart,
+#stage-fear-chart,
+#drained-chart {
+  height: 300px !important;
+}
+
+/* グラフを含むカードボディの高さ制限 */
+.card-body canvas {
+  max-height: 350px;
+}
+
+.dashboard-stat {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.dashboard-stat-label {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 2px;
+}
+
+.btn-outline-primary {
+  border-color: #4e73df;
+  color: #4e73df;
+}
+
+.btn-outline-primary:hover {
+  background-color: #4e73df;
+  color: white;
+}
+
+.form-control:focus {
+  border-color: #4e73df;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .dashboard-stat {
+    font-size: 1.5rem;
+  }
+} 

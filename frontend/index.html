@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>外向性 vs. 内向性の行動ダッシュボード</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="bg-primary text-white py-3 mb-4">
+      <div class="container">
+        <h1 class="text-center">外向性 vs. 内向性の行動ダッシュボード</h1>
+      </div>
+    </header>
+
+    <div class="container">
+      <!-- サマリーカード -->
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-header bg-light">データ概要</div>
+            <div class="card-body">
+              <div id="summary-data">読み込み中...</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="card h-100">
+            <div class="card-header bg-light">データ分布</div>
+            <div class="card-body">
+              <canvas id="distribution-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 特性比較 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header bg-light">各指標の平均値比較</div>
+            <div class="card-body">
+              <canvas id="avg-comparison-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header bg-light">人間関係指標</div>
+            <div class="card-body">
+              <canvas id="social-radar-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yes/No質問の結果 -->
+      <div class="row mb-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header bg-light">ステージ恐怖症</div>
+            <div class="card-body">
+              <canvas id="stage-fear-chart"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-header bg-light">社交後の疲労感</div>
+            <div class="card-body">
+              <canvas id="drained-chart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- データテーブル -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header bg-light d-flex justify-content-between align-items-center">
+              <span>生データ</span>
+              <div>
+                <input type="text" id="data-search" class="form-control form-control-sm" placeholder="検索...">
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-striped table-hover" id="data-table">
+                  <thead>
+                    <tr>
+                      <th>一人で過ごす時間</th>
+                      <th>ステージ恐怖症</th>
+                      <th>社交イベント参加</th>
+                      <th>外出頻度</th>
+                      <th>社交後の疲労感</th>
+                      <th>友人の数</th>
+                      <th>投稿頻度</th>
+                      <th>性格タイプ</th>
+                    </tr>
+                  </thead>
+                  <tbody id="data-body">
+                    <tr>
+                      <td colspan="8" class="text-center">読み込み中...</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="d-flex justify-content-between align-items-center mt-2">
+                <div>
+                  <span id="data-showing">0-0 / 0</span> 件表示
+                </div>
+                <div>
+                  <button class="btn btn-sm btn-outline-primary" id="prev-page" disabled>前へ</button>
+                  <button class="btn btn-sm btn-outline-primary" id="next-page" disabled>次へ</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-light py-3 mt-4">
+      <div class="container text-center">
+        <p class="mb-0">外向性 vs. 内向性の行動ダッシュボード &copy; 2023</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html> 
